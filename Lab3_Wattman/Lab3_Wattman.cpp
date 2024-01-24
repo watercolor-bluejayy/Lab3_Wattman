@@ -30,7 +30,7 @@ void getChoices(float& A, float& B) //function to input and store values for var
     
 }
 
-void Add(float A, float B) //function to add A and B if chosen
+void Add(float A, float B) //function to add A and B if chosen (follow same logic for next 3 func)
 {
     float answer;
     answer = (A + B);
@@ -68,7 +68,7 @@ int main()
     printMenu(selection);
     getChoices(A, B);
 
-    if (selection == 1) //conditional statment to call Add fucntion if selection was 1
+    if (selection == 1) //conditional statment to call Add fucntion if selection was 1 (follow same logic for next 3 ifs
     {
          Add(A, B);
     }
