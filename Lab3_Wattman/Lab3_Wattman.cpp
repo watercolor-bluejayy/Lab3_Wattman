@@ -1,58 +1,93 @@
 // Lab3_Wattman.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//Written by Jayy Wattman 1/24/2024
 
 #include <iostream>
 
 using namespace std;
 
-void printMenu(int& choice)
+void printMenu(int& selection) //shows the menu and allows users to select an option
 {
     cout << "Welcome to my program, please select an operation to perform:" << endl;
-    cout << "1. Placeholder" << endl;
-    cout << "2. Another Placeholder" << endl;
-    cout << "3. And a third one" << endl;
+    cout << "1. Addition" << endl;
+    cout << "2. Subtraction" << endl;
+    cout << "3. Multiplication" << endl;
+    cout << "4. Division" << endl;
 
     cout << "\nYour Selection: ";
-    cin >> choice; 
+    cin >> selection; 
+   
 }
 
-void getChoices(float& A, float& B)
+void getChoices(float& A, float& B) //function to input and store values for vari A and B
 {
     cout << "Please enter the first value:";
     cin >> A;
-    // the rest of this function is an exercise to the reader
+
+    cout << "Please enter the second value: ";
+    cin >> B;
+
+    cout << endl;
+    
 }
 
-void firstChoice(float A, float B)
+void Add(float A, float B) //function to add A and B if chosen
 {
-    cout << "This is proving the first choice ran" << endl;
+    float answer;
+    answer = (A + B);
+    cout << A << "+" << B << "=" << answer << endl;
 }
 
-void secondChoice(float A, float B)
+void Subtract(float A, float B)
 {
-    cout << "This is proving the second choice ran" << endl;
+    float answer;
+    answer = (A - B);
+    cout << A << "-" << B << "=" << answer << endl;
+}
+
+void Multiply(float A, float B)
+{
+    float answer;
+    answer = (A * B);
+    cout << A << "*" << B << "=" << answer << endl;
+}
+
+void Divide(float A, float B)
+{
+    float answer;
+    answer = (A / B);
+    cout << A << "/" << B << "=" << answer << endl;
 }
 
 int main()
 {
-    int choice;
+    int selection;
     float A;
     float B;
+    float answer;
 
-    printMenu(choice);
+    printMenu(selection);
     getChoices(A, B);
 
-    if (choice == 1)
+    if (selection == 1) //conditional statment to call Add fucntion if selection was 1
     {
-        firstChoice(A, B);
+         Add(A, B);
     }
 
-    if (choice == 2)
+    if (selection == 2)
     {
-        secondChoice(A, B);
+        Subtract(A, B);
     }
 
-    return 0;
+    if (selection == 3)
+    {
+        Multiply(A, B);
+    }
+
+    if (selection == 4)
+    {
+        Divide(A, B);
+    }
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
